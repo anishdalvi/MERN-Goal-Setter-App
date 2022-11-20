@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import goalService from './goalService'
-import { toast } from 'react-toastify'
 
 const initialState = {
     goals: [],
@@ -22,7 +21,7 @@ export const createGoal = createAsyncThunk('goals/create', async (goalData, thun
 
         }
         else{
-            toast.error("User Gone createGoal")
+            console.log("User Gone createGoal")
         }
       } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
@@ -40,7 +39,7 @@ export const getGoals = createAsyncThunk('goals/getAll', async(_, thunkAPI) => {
             return await goalService.getGoals(token)
         }
         else{
-            toast.success("Successfully Logged Out" ,{autoClose:1000})
+            console.log("User Gone during getGoals")
         }
       } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
