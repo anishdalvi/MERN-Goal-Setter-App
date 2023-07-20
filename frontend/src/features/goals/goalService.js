@@ -10,9 +10,10 @@ const createGoal = async (goalData, token) => {
             Authorization: `Bearer ${token}`
         }
     }
-
+    //console.log("In goalservice: ", goalData);
+    //console.log("In goalservice: ", config);
     const response = await axios.post(API_URL, goalData, config)
-
+    //console.log("In goalservice: ", response);
     return response.data
 }
 
