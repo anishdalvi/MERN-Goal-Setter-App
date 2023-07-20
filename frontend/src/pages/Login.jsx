@@ -65,6 +65,15 @@ function Login() {
                     <FaSignInAlt /> Login
                 </h1>
                 <p>Login and Start Setting Goals</p>
+
+                <div style={{textAlign:'start', margin:'0 auto', width:"300px"}}>
+                    <h6 style={{ fontSize: '15px', fontWeight: 'lighter' }} >
+                        Demo Account: <span style={{fontWeight: '600'}}> demo@demo.com </span>
+                    </h6>
+                    <h6 style={{ fontSize: '15px', fontWeight: 'lighter' }} >
+                        Demo Password: <span style={{ fontWeight: '600' }}> 1234 </span>
+                    </h6>
+                </div>
             </section>
 
             <section className="form">
